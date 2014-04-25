@@ -33,6 +33,14 @@
 		// Set ImeMode to "NoControl" to prevent the typing of double-width characters/numbers
 		//internal bool DisableIMEInput();
 		
+		// System-wide front-end settings including
+			- Text fields (No Paste until we get good front-end event handling error checking, 
+			    input cannot be empty (some exceptions), input cannot be wider than is visible
+			    (or by setting bindings already, hopefully for most), 
+			- Password text fields (character hiding, all the text box settings,...)
+			- Datagrids must scale the width of columns to the data after loading it
+			- 
+		
 -------------------------------------------------------
 			Model modules
 
@@ -60,8 +68,10 @@ All data persistent functions
 		internal bool InitializeForm();
 		#region InitializeForm() sub-Functions
 				
-		// Set Anchors for all controls
-		//internal bool SetDefaultAnchors();
+		// SET THESE W/ PROPERTIES WINDOW:		
+		//     Location for all controls
+		//     Anchors for all controls
+
 		
 		// Load Form Defaults
 		internal bool LoadDefaultValues();
@@ -97,7 +107,9 @@ All data persistent functions
 		//  because this should be the only place that specific controls on forms should
 		//  be referenced directly.
 		//                                   They do not belong in a Control object.
-		
+	
+		// This is different for every form and is documented on both View/
+		//   Control sides so that chanegs can be made easily
         #region Methods (Send Data To Control)
         
 		
