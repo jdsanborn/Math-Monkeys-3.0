@@ -1,0 +1,158 @@
+								What is the purpose of Modify User form? Edit User form?
+
+Jeff Bunce <bunce32@gmail.com>
+	
+2:56 PM (2 hours ago)
+		
+to Jonathan, Jeff
+Do they work together?  Are they separate ideas?  Is the Modify User form used to select students for all sorts of menu items?
+Jonathan Sanborn
+	
+4:09 PM (1 hour ago)
+		
+to Jeff, me
+
+The Menu Item edit student opens frmModifyUser which should list all users by their full name the data grid should only allow a single user to be selected. The on the data gird and ALL similar data grids when a user is hovered over  a tool tip should show up containing more detail about the user. When the “Modify Selected user” button (the text below this button is going to be reduced)  is hovered over there should be a tool tip that says “Modify the selected user”. When this button is clicked this form should close and the frmEditUser should open populated with the selected users data. The controls in the type group box should display the user type but be disabled. The Re-Enter Password box should be populated with the masked password but not data bound to the password. The birthday should allow dates from today to 120 years in the past. The text boxes that currently allow 30 characters are going to be reduced to 20 or less. The password boxes should be masked. The selection mode on all data grids should be full row select. Data grids should only allow selecting and resizing of rows and columns, no adding, no updating, no deleting. Alternating row should have a light gray background. Row headers should not be visible. A back button will be added to the edit user for that should return it to the modify user form and if any changes have been made the system should ask if these changes should be saved, if no changes have been made the system will not ask. When the user clicks on the save button if the data is valid the changes should be saved to the XML and the Data Source and the form should close. If the data is invalid the invalid data should be flagged along with why it is invalid the system should stay on the same form without changing any of the data. The cancel button should close the form without saving any changes.
+ 
+ 
+ 
+ 
+  ===================================================================================
+									How should users be selected?
+  
+ 
+ Jeff Bunce <bunce32@gmail.com>
+	
+2:54 PM (2 hours ago)
+		
+to Jonathan, Jeff
+For most options on the menu, there's nothing too obvious.  We're going to delve into the SRS and Use Cases for hints but we didn't see any obvious solution..  Thoughts?
+Jonathan Sanborn
+	
+3:13 PM (2 hours ago)
+		
+to me
+
+Students/Users will be either single selected or multi-selected based on the desired result. Selection will involve the standard data grid of all students or where called for all users listed by their full name. Some forms will lead to other forms. Such an interaction will require a back button also.  
+
+
+
+
+ ===================================================================================
+									Questions for Analysts
+ 
+
+Jeff Bunce <bunce32@gmail.com>
+	
+Apr 17 (2 days ago)
+		
+to Jonathan, Jeff
+Arun and I had a few questions by the end of our pair programming session.  Here they are:
+
+
+New Forms:  Assignment form,  more for reports (individual form for each report type?
+    **only really need multiple forms if new controls are needed
+
+frmDrillResults.cs   needs to have the rewards earned labels
+
+close menu item closes all open tabs??? or just active tab???
+
+rename frmAddStudent to frmAddUser    (implies adding admin is going to be a new requirement????)
+Jonathan Sanborn
+	
+3:06 PM (2 hours ago)
+		
+to Jeff, me
+
+New Forms: ->  No idea what is even being asked here.
+
+ Close menu item should close all child forms and then the parent form quitting the application. Perhaps it should be renamed exit.
+
+Single admin was vetoed in SRS feedback. We need to be able to add/update/delete admins.
+
+ 
+ 
+ ===================================================================================
+									How many forms for reports?
+ 
+ Jeff Bunce <bunce32@gmail.com>
+	
+Apr 17 (2 days ago)
+		
+to Jonathan, Jeff
+One for each type of reports?
+
+One for all reports?
+
+
+Also, are the names of the reports going to change (Individual Report)?
+Jonathan Sanborn
+	
+3:00 PM (2 hours ago)
+		
+to Jeff, me
+
+Please be more explicit in your questions.
+
+ 
+
+I am expecting a single form for the summary report with the possibility of filtering the report results and possibly double clicking on the students name to open a detailed report on that student.
+
+ 
+
+For the Detailed report I expect the form I already showed you. Many could be opened but at most one for each student.
+
+ 
+
+For the parent reports I would expect just a print preview type of approach.
+
+ 
+
+The names in the SRS and Use cases will not change unless the report changes significantly.  The names presented to the user may change to add clarity or better user interaction.
+
+ 
+
+I think this answers your questions but I am not sure let me know.
+
+ 
+
+Jonathan Sanborn
+
+sanbo002@cougars.csusm.edu
+
+ 
+
+From: Jeff Bunce [mailto:bunce32@gmail.com]
+Sent: Thursday, April 17, 2014 8:19 PM
+To: Jonathan Sanborn; Jeff Cribben
+Subject: How many forms for reports
+Jeff Bunce <bunce32@gmail.com>
+	
+3:05 PM (2 hours ago)
+		
+to Jonathan
+Perfect, thank you.  Since we're on the topic, and if you have a moment, could you check the admin control screen? 
+
+I was playing around with making the MDI container work nicely but I doubt my 4am solution was too awesome.  What do you think o f having the welcome banner animated away to hide and possibly show itself again?  I think I can figure out how to make the MDI container behave differently (tabs, etc) if this isn't going to work.
+
+
+
+ 
+===================================================================================
+								What use cases are you guys expecting to use?
+
+Jeff Bunce <bunce32@gmail.com>
+	
+Apr 17 (2 days ago)
+		
+to Jonathan, Jeff
+Although we don't need individual use case documents just yet we could really use an updated use case diagram so that we can break the Control class down into UseCaseControl Classes.
+
+Is there any chance that we could get one of those this weekend?  :D
+Jonathan Sanborn
+	
+2:51 PM (2 hours ago)
+		
+to Jeff, me
+
+I do not expect the use case diagram to change very much. Jeff and I will certainly be taking a look at I this weekend though.

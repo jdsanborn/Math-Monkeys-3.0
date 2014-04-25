@@ -1,0 +1,12 @@
+View->Other Windows->Document Outline        	view all controls on the form that is open in VS
+
+
+
+Ctrl+E, D										Format whole doc   (nice indents in C# style)
+
+Ctrl+K, Ctrl+F									Format selection
+
+CTRL + K, CTRL + C 								COMMENT
+CTRL + K, CTRL + U								UNCOMMENT
+
+Ctrl+.											auto-include the correct namespace  + cool stuff!

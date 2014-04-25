@@ -1,0 +1,121 @@
+			Control Object(s)
+
+-- All logic(business logic) in controller module.
+
+** General Rule:  Control objects should receive strings only from form objects (if possible).
+					Worst case, receive Visual C# objects but..
+					The Control object should Never operate directly on Form controls  (coupled way too tightly otherwise)
+
+- tooltip text that can be generalized by use case; fetch these using GetUseCaseToolTips()
+					
+// Disable the ShowInTaskbar option (only for a few forms)
+		internal bool DisableShowInTaskbar();			
+			
+// Clear specific fields when bad input is passed to Control object
+		internal bool ClearFieldsOfBadInput(object sender, EventArgs e);
+		
+					//BIND USING DATASOURCES
+		// Set System-wide font to all controls //that display text/receive keyboard input
+		//internal bool SetFonts();
+		
+		// Set System-wide size to controls
+		//internal bool SetControlSize();
+		
+		// Set the size of the form to one of the //three allowed size; this data should be //pulled from settings
+		//internal bool SetFormSize();
+				
+		// Some of the tooltip text can be //generalized by use case; this function //fetches that text
+		//internal list<string> GetUseCaseToolTips();
+		
+		// Set the Math Monkeys icon (from settings)
+		//internal bool SetIcon();
+		
+		// Set ImeMode to "NoControl" to prevent the typing of double-width characters/numbers
+		//internal bool DisableIMEInput();
+		
+-------------------------------------------------------
+			Model modules
+
+All data persistent functions
+
+
+
+--------------------------------------------------------
+			View (frmObjects)
+				
+-- 		// All forms need the following functions:
+	
+	interface IViewToControl
+	{
+		// Reduce coupling to control object by calling these functions from Control
+	
+		// Generally, these methods will be extremely tightly coupled to an interface 
+		//  because this should be the only place that specific controls on forms should
+		//  be referenced directly.
+		//                                   They do not belong in a Control object.
+	
+        #region Methods
+        
+		// Do everything necessary to set up the form
+		internal bool InitializeForm();
+		#region InitializeForm() sub-Functions
+				
+		// Set Anchors for all controls
+		//internal bool SetDefaultAnchors();
+		
+		// Load Form Defaults
+		internal bool LoadDefaultValues();
+		
+		// Set Focus to first control in tab order
+		internal bool InitializeFocus();
+		
+		// Bind specific controls to the system-wide datasources
+		internal bool BindToDataSources();
+		
+		// Gray out any controls that the current user should not have access to
+		internal bool InitializeGrayOuts();
+		
+		// Set the language of the form
+		//internal bool SetLanguage(string language);
+
+		// Set the ShowIcon option
+		internal bool SetShowIcon(bool isDisplayed);
+		
+		
+		// I'm pretty sure we'll need more functions here
+		#endregion				
+	}
+				
+				
+-- all forms that pass input to the Control object should implement this interface:
+    interface IPassInputToControl
+    {
+		// Reduce coupling between View and Control classes by passing
+		//  lists of strings to the Control object
+		
+		// Generally, these methods will be extremely tightly coupled to an interface 
+		//  because this should be the only place that specific controls on forms should
+		//  be referenced directly.
+		//                                   They do not belong in a Control object.
+		
+        #region Methods (Send Data To Control)
+        
+		
+		// Call front-end input checkers (or validate here)
+        internal bool IsFormInputValid();
+        
+		// Pass input to the Control as strings
+        internal bool SendInput(List<string> inputList);
+        
+		// Clear fields that should be empty on loading the form
+		internal bool ClearTextFields();
+		
+
+		
+        #endregion
+    }
+	
+	
+-- event handlers should call one method from MMControl
+
+-- tooltips that explain what specific GUI elements do

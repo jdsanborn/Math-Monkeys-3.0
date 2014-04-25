@@ -1,0 +1,16 @@
+            frmParentReport testchild = new frmParentReport();
+            testchild.MdiParent = this;
+            testchild.Text = "Parent Report for " + "<student name>";
+
+            TabPage testpage = new TabPage();
+            testpage.Parent = tabMdiContainer;
+            testpage.Text = testchild.Text;
+            testpage.Show();
+
+            testchild.mdiTabPage = testpage;
+			
+			
+http://www.codeproject.com/Articles/12514/Multi-Document-Interface-MDI-tab-page-browsing-wit
+
+
+		**Not going too well, kind of a difficult thing to implement.

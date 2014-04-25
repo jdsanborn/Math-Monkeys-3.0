@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13494355-EB42-4036-B780-CE03F31DBE3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Math_Monkeys</RootNamespace>
+    <AssemblyName>Math Monkeys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\jeff\Dropbox\MY DESKTOP\Current Build\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Math Monkeys</ProductName>
+    <PublisherName>The Code Monkeys</PublisherName>
+    <ApplicationRevision>44</ApplicationRevision>
+    <ApplicationVersion>3.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5670CC65A5DBF3B3180CA506B64BC8F6B116B823</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Math Monkeys Logo 2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Math_Monkeys.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Assignment.cs" />
+    <Compile Include="Classes\AssignmentAttempt.cs" />
+    <Compile Include="Classes\AssignmentSession.cs" />
+    <Compile Include="Classes\FileHandler.cs" />
+    <Compile Include="Classes\IXMLnode.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\MyCheckbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\OperandRange.cs" />
+    <Compile Include="Classes\Operation.cs" />
+    <Compile Include="Classes\Problem.cs" />
+    <Compile Include="Classes\ProblemSet.cs" />
+    <Compile Include="Classes\UserType.cs" />
+    <EmbeddedResource Include="Forms\frmAssignStudents.resx">
+      <DependentUpon>frmAssignStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmParentReport.resx">
+      <DependentUpon>frmParentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddProblemSet.resx">
+      <DependentUpon>frmAddProblemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrillScreenSettings.resx">
+      <DependentUpon>frmDrillScreenSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditUser.resx">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMathMonkeysAbout.resx">
+      <DependentUpon>frmMathMonkeysAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModifyUser.resx">
+      <DependentUpon>frmModifyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProblemSetDefaults.resx">
+      <DependentUpon>frmProblemSetDefaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRemoveProblemSet.resx">
+      <DependentUpon>frmRemoveProblemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRemoveUsers.resx">
+      <DependentUpon>frmRemoveUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStudentReport.resx">
+      <DependentUpon>frmStudentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XML\User.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Forms\frmAssignStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAssignStudents.Designer.cs">
+      <DependentUpon>frmAssignStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmParentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmParentReport.Designer.cs">
+      <DependentUpon>frmParentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddProblemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddProblemSet.Designer.cs">
+      <DependentUpon>frmAddProblemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrillScreenSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrillScreenSettings.Designer.cs">
+      <DependentUpon>frmDrillScreenSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditUser.Designer.cs">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModifyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModifyUser.Designer.cs">
+      <DependentUpon>frmModifyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProblemSetDefaults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProblemSetDefaults.Designer.cs">
+      <DependentUpon>frmProblemSetDefaults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRemoveProblemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRemoveProblemSet.Designer.cs">
+      <DependentUpon>frmRemoveProblemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRemoveUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRemoveUsers.Designer.cs">
+      <DependentUpon>frmRemoveUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStudentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStudentReport.Designer.cs">
+      <DependentUpon>frmStudentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWelcomeStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWelcomeStudent.Designer.cs">
+      <DependentUpon>frmWelcomeStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrillResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrillResult.Designer.cs">
+      <DependentUpon>frmDrillResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMathMonkeysAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMathMonkeysAbout.Designer.cs">
+      <DependentUpon>frmMathMonkeysAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPrinter.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Classes\MMControl.cs" />
+    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Forms\frmAdminControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdminControl.Designer.cs">
+      <DependentUpon>frmAdminControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ProblemSetGenerator.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStudentDrill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStudentDrill.Designer.cs">
+      <DependentUpon>frmStudentDrill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmWelcomeStudent.resx">
+      <DependentUpon>frmWelcomeStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrillResult.resx">
+      <DependentUpon>frmDrillResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdminControl.resx">
+      <DependentUpon>frmAdminControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStudentDrill.resx">
+      <DependentUpon>frmStudentDrill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Math Monkeys_1_TemporaryKey.pfx" />
+    <None Include="Math Monkeys_TemporaryKey.pfx" />
+    <None Include="MMClassDiagram.cd" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Assignment.datasource" />
+    <None Include="Properties\DataSources\MMControl.datasource" />
+    <None Include="Properties\DataSources\ProblemSet.datasource" />
+    <None Include="Properties\DataSources\Student.datasource" />
+    <None Include="Properties\DataSources\Student1.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="XML\ProblemSet.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XML\Assignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XML\AssignmentAttempt.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mathmonkeyslogo2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Math Monkeys Logo 3.png" />
+    <None Include="Resources\arrow.jpg" />
+    <None Include="Resources\arrow2.png" />
+    <None Include="Resources\arrow3.jpg" />
+    <None Include="Resources\arrow4.png" />
+    <None Include="Resources\down_arrow.jpg" />
+    <None Include="Resources\downleft.jpg" />
+    <None Include="Resources\jungle-room-mural.jpg" />
+    <None Include="Resources\left_arrow.jpg" />
+    <Content Include="readme.txt" />
+    <None Include="Resources\Math Monkeys Logo 4.png" />
+    <None Include="Resources\Log-Out-icon %281%29.png" />
+    <None Include="Resources\fileclose.png" />
+    <None Include="Resources\add_user1.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\addNew.png" />
+    <None Include="Resources\addNew1.png" />
+    <None Include="Resources\filesave.png" />
+    <None Include="Resources\addNew2.png" />
+    <None Include="Resources\delete_user.png" />
+    <None Include="Resources\edit_user.png" />
+    <Content Include="Resources\ModifyUser.png" />
+    <None Include="Resources\new_down.png" />
+    <None Include="Resources\new_downt_arrow.png" />
+    <None Include="Resources\new_left.png" />
+    <None Include="Resources\new_left_arrow.png" />
+    <None Include="Resources\new_right.png" />
+    <None Include="Resources\new_up.png" />
+    <None Include="Resources\NumberOfAttempts.txt" />
+    <Content Include="Resources\Right_Arrow.png" />
+    <Content Include="Resources\Save.png" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\Start2.png" />
+    <None Include="Resources\save2.png" />
+    <None Include="Resources\saveUser.png" />
+    <Content Include="Resources\Up_Arrow.png" />
+    <None Include="Resources\times.png" />
+    <None Include="Resources\Subtraction.png" />
+    <None Include="Resources\Plus.png" />
+    <None Include="Resources\add_user.png" />
+    <None Include="Resources\add_user2.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\Divide.png" />
+    <None Include="Resources\apply.png" />
+    <Content Include="Resources\Bitmap1.bmp" />
+    <Content Include="Resources\Down_Arrow.png" />
+    <Content Include="Resources\Left_Arrow.png" />
+    <Content Include="Resources\Math Monkeys Logo 2.ico" />
+    <None Include="Resources\Math Monkeys Logo.jpg" />
+    <None Include="Resources\Math Monkeys Logo 2.png" />
+    <None Include="Resources\MM Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="readme.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

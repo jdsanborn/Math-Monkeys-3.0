@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problemSets>
+	<problemSet>
+		<id></id>
+		<name></name>
+		<operation></operation>
+		<operands>
+			<operand>
+				<rangeMin></rangeMin>
+				<rangeMax></rangeMax>
+			</operand>
+		</operands>
+		<numberOfProblems></numberOfProblems>
+	</problemSet>
+</problemSets>

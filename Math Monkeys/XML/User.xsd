@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Author: Jonathan Sanborn
+  Date: 29 March 2014
+  Filename: User.xsd
+  Summary: XML Schema for verifing the User data type
+-->
+<xs:schema id="User"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:element name="Users" >
+    <xs:complexType >
+      <xs:sequence>
+        <xs:element name="User" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name = "ID" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                    <xs:minLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:unique name="UniqueID">
+                  <xs:selector xpath="User"/>
+                  <xs:field xpath="ID" />
+                </xs:unique>
+              </xs:element>
+              <xs:element name = "Type"  >
+                <xs:simpleType >
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="None" />
+                    <xs:enumeration value="Administrator" />
+                    <xs:enumeration value="Student" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>             
+              <xs:element name = "ScreenName" minOccurs="1" maxOccurs="1">
+                 <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                    <xs:minLength value="1" />
+                    <xs:pattern value="[a-zA-Z0-9 -.`]+" />
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:unique name="UniqueScreenName">
+                  <xs:selector xpath="User"/>
+                  <xs:field xpath="ScreenName" />
+                </xs:unique>
+              </xs:element>
+              <xs:element name = "Name" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name = "First" minOccurs="0" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                          <xs:minLength value="1" />
+                          <xs:pattern value="[a-zA-Z0-9 -.`]+" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name = "Last" minOccurs="0" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                          <xs:minLength value="1" />
+                          <xs:pattern value="[a-zA-Z0-9 -.`]+" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Password" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                    <xs:minLength value="1" />
+                    <xs:pattern value="[a-zA-Z0-9]+" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoginRecords" minOccurs="0" maxOccurs="1" nillable="true" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Login"  minOccurs="0" maxOccurs="unbounded"  nillable="true">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Date" minOccurs="1" maxOccurs="1"  nillable="true">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:dateTime">
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>   
+                          <xs:element name="Duration" minOccurs="0" maxOccurs="1"  nillable="true" >
+                            <xs:simpleType>
+                              <xs:restriction  base="xs:duration">
+								
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>        
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DOB" minOccurs="0" maxOccurs="1"  nillable="true">
+                <xs:simpleType >
+					        <xs:restriction base="xs:dateTime" >
+					        </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grade" minOccurs="0" maxOccurs="1"  nillable="true">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30"/>
+                    <xs:pattern value= "[a-zA-Z0-9 -.`]*" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
