@@ -300,7 +300,6 @@
     </None>
     <None Include="Math Monkeys_1_TemporaryKey.pfx" />
     <None Include="Math Monkeys_TemporaryKey.pfx" />
-    <None Include="MMClassDiagram.cd" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\Assignment.datasource" />
     <None Include="Properties\DataSources\MMControl.datasource" />
@@ -362,7 +361,6 @@
     <None Include="Resources\downleft.jpg" />
     <None Include="Resources\jungle-room-mural.jpg" />
     <None Include="Resources\left_arrow.jpg" />
-    <Content Include="readme.txt" />
     <None Include="Resources\Math Monkeys Logo 4.png" />
     <None Include="Resources\Log-Out-icon %281%29.png" />
     <None Include="Resources\fileclose.png" />
@@ -408,18 +406,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <PublishFile Include="readme.txt">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

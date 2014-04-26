@@ -17,8 +17,10 @@ namespace Math_Monkeys.Forms
 
         #endregion
 
+
         #region Properties
         #endregion
+
 
         #region Event Handlers
         /// <summary>
@@ -111,6 +113,7 @@ namespace Math_Monkeys.Forms
 
         #endregion
 
+
         #region Private Methods
 
         /// <summary>
@@ -172,8 +175,10 @@ namespace Math_Monkeys.Forms
 
         #endregion
 
+
         #region Public Methods
         #endregion
+
 
         #region Validation
 
@@ -478,6 +483,7 @@ namespace Math_Monkeys.Forms
 
         #endregion
 
+
         #region Constructors
 
         /// <summary>
@@ -496,5 +502,7 @@ namespace Math_Monkeys.Forms
         }
 
         #endregion
+
+
     }
 }
